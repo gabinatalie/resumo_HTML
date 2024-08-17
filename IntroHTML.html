@@ -1,0 +1,352 @@
+<!-- 
+ HTML (HyperText Markup Language):
+
+Introdução:
+Hipertexto pode conter referências navegáveis para outros textos (links). 
+Linguagem de marcação, possui símbolos especiais que indicam meta informações. Elas referem-se à forma, hierarquia, ordem e/ou semântica dos elementos da página. 
+Versão 5 (2014) 
+Marcação -> tags
+
+Estrutura básica de um arquivo html:
+- Inicia com HTML
+-Segue para duas estruturas: head e body
+-Head: são as predefinições - dentro do head tem o title
+-Body: todo o conteudo da página 
+
+Tags: tags delimitam o início e o fim de um conteúdo específico no seu documento HTML. Sua principal responsabilidade é marcar a estrutura de uma página da web. -->
+
+
+<!DOCTYPE html>
+<!--  Tem como responsabilidade indicar que esta página está utilizando a versão do HTML5. -->
+<html lang="pt-BR">
+<!--  É a tag raiz da sua página, que engloba todos os elementos do seu site, através desta tag a partir do lang também definimos qual o idioma da página que estamos construindo.
+ -->
+
+<head>
+    <!-- A tag head é utilizada como um container que ficarão alocadas informações da página que não serão exibidas diretamente no navegador, informações como metatags responsáveis por metadados.  -->
+    <meta charset="UTF-8">
+    <!-- Metatag responsável pelas configurações de caracteres de sua página.
+ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metatag que tem como papel informar ao navegador sobre como controlar e ajustar o dimensionamento de sua página (que varia de dispositivo para dispositivo).
+ -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--  Metatag referente a questão de compatibilidade com outros navegadores. No caso content=”IE=edge” = Internet Explorer = Microsoft Edge, pois o Explorer não suportava alguns dos conteúdos que o HTML5 proporcionava.  -->
+    <title>Título da ABA do navegador</title>
+    <!-- Tag responsável pelo nome do título do seu navegador, a partir dela que definimos o título da página.
+ -->
+</head>
+
+
+<body>
+    <!-- Tag super importante que tem como papel conter todos os elementos visíveis de sua página. -->
+
+    <header>
+        <!-- tag semantica para indicar o cabeçalho da página, normalmente onde fica a barra de navegação -->
+
+        <nav></nav>
+        <!-- representa uma seção de uma página cujo propósito é fornecer links de navegação, seja dentro do documento atual ou para outros documentos. Exemplos comuns de seções de navegação são menus, tabelas de conteúdo e índices. -->
+    </header>
+    <main>
+        <!-- tag semantica para idicar a parte principal do site, o corpo  -->
+        <!-- TÍTULOS -->
+        <h1>Bem vindo</h1>
+        <h2>Bem vindo</h2>
+        <h3>Bem vindo</h3>
+        <h4>Bem vindo</h4>
+        <h5>Bem vindo</h5>
+        <h6>Bem vindo</h6>
+        <!-- Heading tags são as marcações de cabeçalho referente aos títulos que tem uma ordem hierárquica do 1 ao 6, também conhecida como etiquetas de títulos e subtítulos.  -->
+
+        <!-- id sempre é um indicador único, pois é como você vai lincar ao css especificamente -->
+        <h1 id="titulo-principal">Titulo</h1>
+        <!-- class também serve para fazer referencia no css, você pode repetir, criando uma edição mais generica -->
+        <p class="paragráfo">Primeiro parágrafo!</p>
+
+        <!-- TAGS DE TEXTO -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, necessitatibus.</p>
+        <!-- <p> tag usada para texto/parágrafo -->
+        <!-- <b>, <u> e <i>: são tags de estilo, não tem significado semântico, por isso é melhor estilizar usando CSS -->
+        <!-- <strong> e <em>: são usadas para indicar importância e ênfase. <strong>: Indica que o texto é de importância forte. Além de afetar a apresentação (por padrão, geralmente é renderizado em negrito), o uso da tag transmite a ideia de que o conteúdo é mais importante do que o texto normal. <em>: Indica que o texto deve ser enfatizado. Por padrão, geralmente é renderizado em itálico, mas semanticamente, transmite que o conteúdo é destacado ou enfatizado. -->
+        <!-- <s>: Usada para indicar que o texto está riscado ou que não é mais relevante. Tem um significado semântico, indicando que o
+        texto não está mais em uso ou foi removido.  -->
+        <!-- <mark>: Usada para destacar ou marcar partes do texto. Tem um significado semântico, indicando que o texto está sendo destacado
+        por alguma razão, como uma correspondência em uma busca. -->
+        <p>Lorem ipsum <strong>gueibitch</strong> dolor sit amet <b>gueibi</b> consectetur adipisicing elit. Accusamus
+            accusantium <i>banana</i> odit, temporibus ad
+            odio nemo <em>maça</em> enim voluptatum commodi possimus <mark>poxa vida que top</mark> beatae est itaque.
+            Veniam
+            enim laborum iure libero
+            <s>cachorro</s> voluptate vel
+            similique!
+        </p>
+
+        <!-- tag pre: ela deixa o texto pre formatado, como você deixa aqui aparece na pagina, é exibido exatamente como está no código-fonte, preservando espaços em branco e quebras de linha.é exibido em uma fonte monoespaçada, que é a mesma usada para o texto em editores de código. Essa fonte é geralmente conhecida como fonte de "largura fixa" ou "monoespaçada". -->
+        <!-- pode ser usada em conjunto com outras tags HTML para criar estruturas mais complexas, como inserir código fonte no site. Muitas vezes, ela é usada junto com a tag <code> para indicar que o texto é código, como no exemplo abaixo: -->
+        <pre>
+        a = 10
+        Hello world!
+        oi                  oi
+        </pre>
+
+        <!-- <code> também deixa a palavra formatada como se fosse um código mesmo -->
+        <pre><code>
+        function helloWorld() {
+            console.log("Hello, World!");
+        }
+        </code></pre>
+        Observe que no código acima foi criada uma variavel chamada <code>número</code>
+
+        <!-- blockquote usada para citações -->
+        <blockquote>
+            Aqui dentro teria uma citação
+        </blockquote>
+
+        <p>
+            2<sup>10</sup>
+            <!-- deixa acima do texto, sobrescrito -->
+        </p>
+
+        <p>
+            H<sub>2</sub>0 ; CO<sub>2</sub>
+            <!-- deixa a baixo da linha do texto -->
+        </p>
+
+        <!-- <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. Ele pode ser usado para
+        agrupar elementos para fins de estilo (usando os atributos class ou id ), ou para compartilhar valores de atributos como
+        lang. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. <span> é muito parecido com o
+        elemento <div> , entretando <div> é um elemento de nível de bloco enquanto <span> é um elemento em linha.  -->
+        <p>Lorem ipsum dolor <span>Gabrielle Alves</span> amet consectetur, adipisicing elit. Repudiandae omnis
+            recusandae
+            deserunt amet, molestias tempora, incidunt aliquam sed
+        <div>Gabrielle Alves</div>corrupti ad exercitationem saepe distinctio natus ipsum,
+        ratione consequuntur voluptate debitis minus.</p>
+
+        <!-- representa uma parte de um documento cujo conteúdo está apenas indiretamente relacionado ao conteúdo principal do documento. Os apartes são frequentemente apresentados como barras laterais ou caixas de chamada.<aside> -->
+        <aside>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut tempore fugit praesentium nemo, ratione
+                ipsa vel odio molestiae commodi nobis cum reiciendis quisquam eaque fuga neque ex tempora sit inventore.
+            </p>
+        </aside>
+
+
+        <!-- LISTAS -->
+        <ol>
+            <!-- tag usada para lista numerada (ordered list) -->
+            <li>exemplo</li>
+            <!-- tag usada para cada item da lista (list item) -->
+            <li>exemplo</li>
+            <li>exemplo</li>
+        </ol>
+        <ul>
+            <!-- tag usada para lista não numerada (unordered list) -->
+            <li>exemplo</li>
+            <li>exemplo</li>
+            <li>exemplo</li>
+        </ul>
+
+        <article>
+            <!-- deve conter algo que faça sentido por si só, como uma notícia, um post de blog, uma entrada de fórum, ou um comentário de usuário. -->
+            <h2>artigo x</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas earum aut reiciendis laboriosam fuga
+                dolorum cupiditate sed, omnis temporibus, qui aliquid eligendi! Distinctio magni vel atque, ullam modi
+                perspiciatis praesentium!</p>
+        </article>
+
+        <!-- LINKS -->
+        <a href="http://google.com.br" target="_blank">Clique aqui e acesse o Google</a>
+        <!-- tag usada para links -->
+        <!-- no target "_self" abre o link na aba que está, "_blank" abre em uma aba nova -->
+
+
+        <!-- IMAGEMS -->
+        <figure>
+            <!-- tag semantica para envolver uma imagem -->
+            <img src="images/heart.jpg" alt="imagem de coração">
+            <!--  tag usada para inserir imagens na página.  O alt é usado por acessibilidade, caso a pessoa não consiga ver a imagem por algum motivo, ela tem pelo menos ideia do conteúdo. No src pode usar tanto o arquivo dentro do projeto (diretorio relativo), como link da imagem (diretório absoluto). Porém usando o link, a imagem pode um dia ser deletada e não aparecer na página, usar o arquivo dentro do projeto é mais seguro. Relativo: Use caminhos relativos quando suas imagens (ou outros arquivos) estiverem dentro da estrutura de diretórios do seu projeto, e o código será utilizado em diferentes ambientes ou URLs. Absoluto: Use caminhos absolutos quando as imagens estão hospedadas em um servidor externo, ou quando você quer garantir que o caminho é o mesmo, independentemente de onde o HTML está sendo carregado.-->
+            <figcaption>Uma imagem de coração</figcaption>
+            <!-- legenda da imagem -->
+        </figure>
+
+        <!-- VIDEO -->
+        <video controls width="250" height="100">
+            <source src="arquivo do video.mp4" type="video/mp4">
+        </video>
+        <video src=""></video>
+        <!-- tag usada para inserir vídeos na página.Semelhante ao elemento <img>, incluímos o caminho da mídia que queremos exibir dentro do atributo src; também podemos incluir outros atributos para especificar informações, como largura e altura do vídeo, se queremos que ele seja reproduzido automaticamente e em loop, se queremos mostrar os controles de vídeo padrão do navegador etc. Assim como img, é interessante que o arquivo do vídeo esteja dentro do projeto-->
+
+
+        <!-- NESTING -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/w7Ovyogf7vQ?si=uGpK9Ap1hOsegHWF"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- tag para incorporar elementos de outra página na sua página web, pode ser vídeos, artigos, mapas, etc. -->
+
+
+        <!-- FORMULÁRIOS -->
+        <fieldset>
+            <!-- tag usada para agrupar um formulário -->
+            <legend>Formulário</legend>
+            <!-- Titulo do fieldset -->
+            <form action="" method="">
+                <!-- <form> conteiner que engloba todo o formulário -->
+                <!-- Atributo action da tag <form> especifica a URL para a qual os dados do formulário devem ser enviados quando o usuário o submete. Em outras palavras, ele define o destino onde os dados do formulário serão processados. Esse destino pode ser uma página do servidor, um script (como PHP ou Node.js), ou uma API que receberá e manipulará as informações enviadas pelo formulário. -->
+                <!-- O atributo method da tag <form> especifica o método HTTP que deve ser usado ao enviar os dados do formulário. Existem dois métodos principais que você pode usar: GET e POST. GET: Envia os dados do formulário anexados à URL na forma de parâmetros de consulta. Geralmente usado quando o formulário não altera o estado do servidor, como em buscas ou filtros. Os dados são visíveis na URL, o que significa que eles podem ser vistos por qualquer pessoa que tenha acesso ao link. Como os dados são enviados na URL, existe uma limitação de tamanho (cerca de 2000 caracteres). POST: Envia os dados do formulário no corpo da requisição HTTP.Usado quando o formulário altera o estado do servidor, como ao enviar dados para um banco de dados ou fazer login. Os dados não são visíveis na URL, pois são enviados no corpo da requisição, o que os torna mais seguros. Não há uma limitação prática no tamanho dos dados enviados.-->
+                <label for="name">nome</label>
+                <!-- a tag <label> é utilizada para associar um rótulo descritivo a um elemento de formlário, como um campo de entrada (input) ou uma área de texto (textarea) -->
+                <!-- A tag <label> pode ser associada a um elemento de formulário usando o atributo for. O valor do atributo for deve ser o mesmo valor do atributo id do elemento de formulário correspondente. -->
+                <input type="text" id="name" name="name">
+                <!-- é usada para criar vários tipos de campos interativos onde os usuários podem inserir dados. -->
+                <!-- o atributo type vai definir qual o tipo de informação será recebida pelo input. -->
+                <!-- o atibuto id é para identificar o input, normalmente é usado o mesmo nome do atributo for da label, assim, ao clicar na label, o cursor irá para o campo do input correspondente -->
+                <!-- O atributo name define o nome do campo de entrada, que é usado para identificar os dados enviados ao servidor. É essencial para que os dados possam ser processados corretamente. -->
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                <!-- password recebe caracteres sem mostra-los na página -->
+                <!-- placeholder: Um texto de exemplo exibido dentro do campo de entrada quando ele está vazio. É útil para dar dicas ao usuário sobre o que deve ser inserido. -->
+                <!-- required: Um atributo booleano que torna o campo obrigatório. O formulário não pode ser submetido se esse campo estiver vazio. -->
+                <label for="generico">e-mail</label>
+                <input type="email" name="e-mail" id="generico">
+                <!-- recebe endereço de e-mail -->
+
+                <label for="generico2">numeros</label>
+                <input type="number" name="numeros" id="generico2" min="0" max="120">
+                <!-- consegue controlar os número a serem inseridos com mínimo e máximo -->
+
+                <label for="generico3">datas</label>
+                <input type="date" name="data" id="generico3">
+                <input type="datetime-local">
+                <input type="month">
+                <!-- recebe apenas datas -->
+
+                <label for="generico4">hora</label>
+                <input type="time" name="hora" id="generico4">
+                <!-- recebe apenas horário -->
+
+                <label for="generico5">arquivo</label>
+                <input type="file" name="arquivo" id="generico5">
+                <!-- para fazer upload de arquivo -->
+
+                <label for="generico6">site</label>
+                <input type="url" name="site" id="generico6">
+                <!-- recebe apenas url -->
+
+                <label for="generico7">cor</label>
+                <input type="color" name="cor" id="generico7">
+                <!-- seleção de cores -->
+
+                <label for="generico8">faixa</label>
+                <input type="range" name="faixa" value="45" min="10" id="generico8">
+                <!-- Controle deslizante para selecionar um valor dentro de uma faixa. -->
+
+                <label for="generico9">
+                    <input type="reset" value="limpar" id="generico9"></label>
+                <!-- limpa o formulário -->
+
+                <label for="primeiro-checkbox">Estará presente</label>
+                <input type="checkbox" id="primeiro-checkbox">
+                <!-- checkbox cria uma seleção que permite multiplas escolhas -->
+
+                <label for="segundo-checkbox">Vira acompanhado</label>
+                <input type="checkbox" id="segundo-checkbox">
+
+                <label for="primeiro-radio">Sim</label>
+                <input type="radio" name="presenca" id="primeiro-radio">
+                <!-- Radio = para opções exclusivas, para que isso aconteça o atributo name tem que ser igual em todas as opçoes -->
+                <label for="segundo-radio">Não</label>
+                <input type="radio" name="presenca" id="segundo-radio">
+
+                <!-- Existem alguns outros tipos, mas esses são os mais usados -->
+
+                <label for="sobre-mim">Escreva sobre voce</label>
+                <textarea rows="5" cols="50" id="sobre-mim"></textarea>
+                <!-- caixa de texto maior, onde você pode definir o tamanho de linhas e colunas e também -->
+
+                <label for="fruta-preferida">Qual a sua fruta preferida?</label>
+                <select id="fruta-preferida" name="fruta-preferida">
+                    <option value="uva">Uva</option>
+                    <option value="morango">Morango</option>
+                    <option value="maça">Maça</option>
+                    <option value="abacaxi">Abacaxi</option>
+                </select>
+
+                <lable for="envio">Enviar Formulário</lable>
+                <input type="submit" id="envio">
+            </form>
+        </fieldset>
+        <section></section>
+        <!-- Tag conteiner que separa uma sessão -->
+
+        <!-- TABELAS -->
+        <!-- table "boder" inclue a divisão entre as linhas e as colunas da tabela no html porém é indicado fazer isso direto no css -->
+        <h2>Tabela de alunos</h2>
+        <table border="2">
+            <!-- Duas estruturas: cabeçalho (thead) e corpo (tbody) da tabela -->
+            <thead>
+                <tr>
+                    <!-- tr = table row: linha da tabela -->
+                    <th>Nome
+                        <!-- cada elemento de uma linha = th somente no cabeçalho -->
+                    </th>
+                    <th>E-mail</th>
+                    <th>Matrícula</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+
+            <!-- Pimeira linha -->
+            <tr>
+                <td>Gabrielle Natalie
+                    <!-- table data: th para o corpo da tabela -->
+                </td>
+                <td>gabi-natalie@hotmail.com</td>
+                <td>1515</td>
+            </tr>
+
+            <!-- Segunda linha -->
+            <tr>
+                <td>Clara Saldones</td>
+                <td>clarasaldones@gmail.com</td>
+                <td>3030</td>
+            </tr>
+
+            <!-- Terceira linha -->
+            <tr>
+                <td>Raquel Silva</td>
+                <td>raquelsilva@gmail.com</td>
+                <td>2929</td>
+            </tr>
+        </table>
+        <h2>Tabela de despesas</h2>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- rowspan = mescla as linhas ; colspan = mescla colunas-->
+                    <td rowspan="2">10/06/24</td>
+                    <td colspan="2">despesa</td>
+                    <!-- <td>almoço</td> -->
+                    <td>R$40,00</td>
+                </tr>
+                <tr>
+                    <td>receita</td>
+                    <td>saláro</td>
+                    <td>R$5.000,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+    <!-- tag semantica para indicar o rodapé da página -->
+</body>
+
+</html>

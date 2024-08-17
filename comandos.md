@@ -1,0 +1,5 @@
+-copiar a mesma linha de código para a linha de baixo "alt + shift + pra baixo nas setas" 
+-abrir live server : alt + l alt + o
+-alt z: ajusta o texto ao tamanho da tela que você estiver usando
+-crtl + d modulo de multipla edição, seleciona um texto ele busca a proxima aparição do mesmo texto e edita as duas ao mesmo tempo
+- ctrl + shift + p - fromat document
